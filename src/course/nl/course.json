@@ -1,0 +1,100 @@
+{
+  "_id": "course",
+  "_type": "course",
+  "_classes": "",
+  "_htmlClasses": "",
+  "title": "Scrum & Planner Intranet",
+  "displayTitle": "Scrum & Planner Intranet",
+  "subtitle": "Van projectplan tot planbord: hoe je scrum toepast en je taken indeelt in het intranet",
+  "description": "Interne handleiding",
+  "body": "Een praktische cursus over scrum en het Green Office intranet: van de basisprincipes van scrum, via het deconstrueren en categoriseren van taken, tot een werkend planbord dat je week na week actueel houdt. Elk onderdeel heeft een stappenplan, een oefening en een paar vragen om te checken of het is blijven hangen.",
+  "instruction": "",
+  "_buttons": {
+    "_submit": {
+      "buttonText": "Nakijken",
+      "ariaLabel": "Kijk mijn antwoord na"
+    },
+    "_reset": {
+      "buttonText": "Opnieuw",
+      "ariaLabel": "Probeer deze vraag opnieuw"
+    },
+    "_showCorrectAnswer": {
+      "buttonText": "Toon antwoord",
+      "ariaLabel": "Toon het juiste antwoord"
+    },
+    "_hideCorrectAnswer": {
+      "buttonText": "Mijn antwoord",
+      "ariaLabel": "Toon mijn eigen antwoord"
+    },
+    "_showFeedback": {
+      "buttonText": "Toelichting",
+      "ariaLabel": "Toon de toelichting"
+    }
+  },
+  "_globals": {
+    "_menu": {
+      "_boxMenu": {
+        "durationLabel": "Tijd:"
+      }
+    },
+    "_accessibility": {
+      "skipNavigationText": "Ga direct naar de inhoud",
+      "_ariaLabels": {
+        "skipNavigation": "Ga direct naar de inhoud",
+        "previous": "Vorige",
+        "next": "Volgende",
+        "close": "Sluiten",
+        "closeDrawer": "Sluit het zijpaneel",
+        "drawer": "Extra informatie",
+        "complete": "Afgerond",
+        "incomplete": "Nog niet afgerond",
+        "correct": "Goed",
+        "incorrect": "Fout",
+        "selectedAnswer": "gekozen",
+        "unselectedAnswer": "niet gekozen",
+        "course": "Hoofdmenu",
+        "menu": "Submenu",
+        "page": "Pagina"
+      }
+    }
+  },
+  "_latestTrackingId": 41,
+  "_pageLevelProgress": {
+    "_isEnabled": true,
+    "_showPageCompletion": false,
+    "_isCompletionIndicatorEnabled": true,
+    "_isShownInNavigationBar": true,
+    "_showAtCourseLevel": false
+  },
+  "_resources": {
+    "_isEnabled": false
+  },
+  "_start": {
+    "_isEnabled": false
+  },
+  "_bookmarking": {
+    "_isEnabled": true,
+    "_level": "component",
+    "_showPrompt": true,
+    "title": "Verdergaan?",
+    "body": "Wil je verdergaan waar je gebleven was?",
+    "_buttons": {
+      "yes": "Ja",
+      "no": "Nee"
+    }
+  },
+  "_navigation": {
+    "_isDefaultNavigationDisabled": false,
+    "_navigationAlignment": "top",
+    "_isBottomOnTouchDevices": false,
+    "_showLabel": false
+  },
+  "_tooltips": {
+    "_isEnabled": true
+  },
+  "_vanilla": {
+    "_favIcon": {
+      "_src": ""
+    }
+  }
+}

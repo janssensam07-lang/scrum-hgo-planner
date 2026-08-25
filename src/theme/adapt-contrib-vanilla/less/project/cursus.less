@@ -1,0 +1,273 @@
+// Cursusstijl — Scrum & Planner Intranet
+// Klassen die in de cursus-JSON via _classes worden gezet.
+// ==================================================
+
+// Rustpunt tussen blokken. Geeft de pagina ritme zonder kopjes te hoeven stapelen.
+// --------------------------------------------------
+.block.separator > .block__inner {
+  border-top: 1px solid @grey;
+  padding-top: 2.5rem;
+}
+
+// Aandachtsblok. Voor tips en kanttekeningen.
+// --------------------------------------------------
+.component.attention {
+  .component__inner {
+    background-color: fade(@blue, 6%);
+    border-inline-start: 4px solid @blue;
+    border-radius: 0.5rem;
+    padding: 1.75rem 2rem;
+  }
+
+  .component__title-inner {
+    color: @blueDark;
+  }
+}
+
+// Invulcanvas
+// De velden zijn gewone textarea's, geen vraagcomponent. Zie
+// js/canvasOpslag.js voor waarom, en voor de opslag.
+// --------------------------------------------------
+.component.canvas-veld {
+  .component__inner {
+    background-color: @greyLight;
+    border: 1px solid @grey;
+    border-radius: 0.5rem;
+    padding: 1.75rem 2rem 2rem;
+  }
+}
+
+.canvas-groep {
+  margin-top: 1.5rem;
+}
+
+.canvas-rij + .canvas-rij {
+  margin-top: 1.25rem;
+}
+
+.canvas-label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: @blueDark;
+}
+
+.canvas-invoer {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid @grey;
+  border-radius: 0.375rem;
+  background-color: @white;
+  color: @font-color;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+
+  &:focus {
+    outline: 2px solid @blue;
+    outline-offset: 1px;
+    border-color: @blue;
+  }
+
+  &::placeholder {
+    color: fade(@font-color, 55%);
+  }
+}
+
+// Knoppen onder het canvas
+// --------------------------------------------------
+.canvas-acties {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.btn-canvas {
+  padding: 0.6875rem 1.25rem;
+  border: 1px solid @blue;
+  border-radius: 0.375rem;
+  background-color: @blue;
+  color: @white;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(@blue, 10%);
+    border-color: darken(@blue, 10%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @blueDark;
+    outline-offset: 2px;
+  }
+
+  // Tweede keus: wissen mag minder hard schreeuwen dan kopiëren.
+  &--stil {
+    background-color: transparent;
+    color: @blueDark;
+
+    &:hover {
+      background-color: fade(@blue, 8%);
+      border-color: @blueDark;
+    }
+  }
+}
+
+.canvas-melding {
+  color: @blueDark;
+  font-size: 0.9375rem;
+}
+
+// Navigatie onderaan elke pagina
+// Bewust een gewone link en geen trickle-knop: die gaat pas aan zodra Adapt
+// de pagina als gezien markeert, en dat hangt af van zichtbaarheidsdetectie.
+// Een link werkt altijd.
+// --------------------------------------------------
+.block.paginanav .component__inner {
+  padding: 0;
+}
+
+.paginanav__rij {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+// Als er maar één knop staat, hoort die rechts
+.paginanav__rij > .paginanav__knop:only-child {
+  margin-left: auto;
+}
+
+.paginanav__knop {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  background-color: @blue;
+  color: @white;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken(@blue, 10%);
+    color: @white;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @blueDark;
+    outline-offset: 2px;
+  }
+
+  &--stil {
+    background-color: transparent;
+    border: 1px solid @blue;
+    color: @blueDark;
+
+    &:hover,
+    &:focus {
+      background-color: fade(@blue, 8%);
+      color: @blueDark;
+    }
+  }
+}
+
+.paginanav__label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.paginanav__titel {
+  font-size: 1.0625rem;
+  font-weight: bold;
+}
+
+// Onderschrift onder de afbeelding, niet eroverheen
+// Vanilla zet dit standaard als halftransparante zwarte balk absoluut over de
+// onderkant van de afbeelding. Bij schermafbeeldingen dekt dat de interface af.
+// --------------------------------------------------
+.component__attribution {
+  position: static;
+  background-color: transparent;
+  padding: 0.625rem 0 0;
+  color: @font-color;
+  text-align: left;
+}
+
+.component__attribution-inner {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: @font-color;
+}
+
+.component__image-container.has-attribution {
+  margin-bottom: 0;
+}
+
+// Afbeelding als blok: anders houdt de inline-baseline een paar pixel ruimte
+// onder de afbeelding, en schuift het onderschrift daar net overheen.
+// --------------------------------------------------
+.graphic__widget img,
+.component__image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Green Office-vormgeving
+// --------------------------------------------------
+body,
+.component__title-inner,
+.block__title-inner,
+.page__title-inner,
+.menu-item__title-inner,
+button,
+input,
+textarea,
+select {
+  font-family: Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+// Kaarten 14px, knoppen en velden 10px — zoals in de app
+.menu-item__inner,
+.component.attention .component__inner,
+.component.canvas-veld .component__inner {
+  border-radius: 14px;
+}
+
+.btn-canvas,
+.paginanav__knop,
+.canvas-invoer,
+.btn__action,
+.js-btn-action {
+  border-radius: 10px;
+}
+
+// Kaarten: witte vlakken op de warme achtergrond, zachte rand en schaduw
+.menu-item__inner {
+  background-color: #FFFFFF;
+  border: 1px solid @grey;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+// De gedimde kleur haalt geen AA voor tekst, dus placeholders
+// krijgen de secundaire tekstkleur in plaats van de muted-kleur.
+.canvas-invoer::placeholder {
+  color: @greyDark;
+  opacity: 1;
+}
