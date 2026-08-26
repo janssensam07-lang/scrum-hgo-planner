@@ -30,18 +30,6 @@
     "instruction": ""
   },
   {
-    "_id": "c-106", "_parentId": "b-106", "_type": "component", "_component": "accordion", "_classes": "", "_layout": "full",
-    "title": "De drie rollen in scrum", "displayTitle": "De drie rollen in scrum",
-    "body": "Scrum kent drie vaste rollen. In een klein team vervul je vaak meerdere rollen tegelijk, maar het is goed om ze uit elkaar te houden.",
-    "instruction": "Klik op een rol om de uitleg te zien.",
-    "_shouldCollapseItems": false,
-    "_items": [
-      { "title": "Product Owner", "body": "<p>Bepaalt de prioriteit van de backlog en vertegenwoordigt de belangen van de opdrachtgever of het project. Beslist wat er als eerste wordt opgepakt en waarom.</p>" },
-      { "title": "Scrum Master", "body": "<p>Bewaakt het proces: helpt het team de scrumwaarden en -principes toe te passen, haalt obstakels weg, en zorgt dat de sprints en overleggen goed verlopen. Geen projectleider die taken verdeelt, wel iemand die het team laat functioneren.</p>" },
-      { "title": "Development Team", "body": "<p>De mensen die het werk daadwerkelijk uitvoeren. Zelforganiserend: het team bepaalt zelf hoe het de taken uit de sprint oppakt.</p>" }
-    ]
-  },
-  {
     "_id": "c-107", "_parentId": "b-107", "_type": "component", "_component": "text", "_classes": "", "_layout": "full",
     "title": "De vier vaste overleggen (events)", "displayTitle": "De vier vaste overleggen (events)",
     "body": "<b>Sprint Planning</b> — aan het begin van elke sprint: welke taken pakken we deze sprint op, en wat is haalbaar?<br><br><b>Daily Scrum</b> — kort, dagelijks overleg: wat heb je gisteren gedaan, wat ga je vandaag doen, loop je ergens tegenaan?<br><br><b>Sprint Review</b> — aan het eind van de sprint: wat hebben we opgeleverd, en sluit dat aan bij wat nodig was?<br><br><b>Sprint Retrospective</b> — direct na de review: hoe verliep de samenwerking, en wat doen we volgende sprint anders?<br><br>Samen zijn dit de momenten waarop je de principes transparantie, inspectie en aanpassing in de praktijk brengt.",
